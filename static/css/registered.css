@@ -1,0 +1,13 @@
+.main-header {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+}
+
+.main-subheader {
+    font-family: 'Varela Round', sans-serif;
+}
+
+#users_list {
+    font-family: 'Varela Round', sans-serif;
+}

@@ -18,7 +18,7 @@ def index_page():
 
 @server.route("/registered",methods=["GET"])
 def registered_page():
-    return flask.render_template("registered.html")
+    return flask.render_template("registered.html", n=len(registered_users))
 
 
 @server.route("/submissions",methods=["GET"])

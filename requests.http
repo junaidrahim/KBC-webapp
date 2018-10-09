@@ -1,0 +1,6 @@
+POST http://192.168.0.104:8000/api/post/register
+content-type: application/json
+
+{
+    "name":"Suraj"
+}
