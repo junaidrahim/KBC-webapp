@@ -1,4 +1,6 @@
-function add_participant_html(data){
+const ip = "192.168.0.106:8000";
+
+let add_participant_html = (data) => {
     let id_list = Object.keys(data)
     let user_list_html = document.getElementById("users_list");
     
@@ -15,17 +17,14 @@ function add_participant_html(data){
             </div>
         </div>
         `;
-        console.log(id_list[i])
     }
-
-    
 }
 
-function get_registered_participants(){
+let get_registered_participants = ()=>{
     $.ajax({
         type: 'GET',
-        url: 'http://192.168.0.104:8000/api/get/registered_users' ,
-        success: function(data){                          
+        url: `http://${ip}/api/get/registered_users` ,
+        success: (data) => {                          
             add_participant_html(data);
             setTimeout(function(){get_registered_participants();},2000);
         }

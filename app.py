@@ -56,25 +56,25 @@ def api_add_submission():
     try:
         if(data["id"] in registered_users and registered_users[data["id"]]==data["name"]):
             if(data["id"] not in submissions):
-                submissions[data["id"]] = [data["name"],[data["time"]]]
+                submissions[data["id"]] = [data["name"],[data["score"]]]
+                print(submissions)
                 return flask.jsonify({"sucess":True, "error": "none"})
             else:
-                submissions[data["id"]][1].append(data["time"])
+                submissions[data["id"]][1].append(data["score"])
                 print(submissions)
                 return flask.jsonify({"sucess":True, "error": "none"})
         else:
             return flask.jsonify({"success":False, "error": "User is not registered"})
-
     except e as Exception:
         return flask.jsonify({"success":False, "error": e})
 
 
 @server.route("/api/get/registered_users", methods=["GET"])
-def api_get_registered_users():
+def api_get_registered_users(): # for the registered.html webpage
     return flask.jsonify(registered_users)
 
 @server.route("/api/get/submissions",methods=["GET"])
-def api_get_submissions():
+def api_get_submissions(): # for the submissions.html webpage
     return flask.jsonify(submissions)
 
 

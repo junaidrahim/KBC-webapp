@@ -1,6 +1,16 @@
-POST http://192.168.0.104:8000/api/post/register
+POST http://192.168.0.106:8000/api/post/register
 content-type: application/json
 
 {
-    "name":"Suraj"
+    "name":"Rohit Khandelwal"
+}
+
+#########
+POST http://192.168.0.106:8000/api/post/submission
+content-type: application/json
+
+{
+    "name":"Rohit Khandelwal",
+    "id": "ckdda",
+    "score": 100561
 }
