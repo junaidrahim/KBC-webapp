@@ -29,13 +29,13 @@ def submissions_page():
 @server.route("/api/post/register",methods=["POST"])
 def api_register_user():
     data = flask.request.get_json()
-    
+    print(data)
     try:
         a = generate_id()
         registered_users[a] = data['name']
         return flask.jsonify({"sucess":True, "id":a, "error": "none"})
 
-    except e as Exception:
+    except Exception as e:
         return flask.jsonify({"success":False, "error": e})
 
 
@@ -57,15 +57,15 @@ def api_add_submission():
         if(data["id"] in registered_users and registered_users[data["id"]]==data["name"]):
             if(data["id"] not in submissions):
                 submissions[data["id"]] = [data["name"],[data["score"]]]
-                print(submissions)
+                #print(submissions)
                 return flask.jsonify({"sucess":True, "error": "none"})
             else:
                 submissions[data["id"]][1].append(data["score"])
-                print(submissions)
+                #print(submissions)
                 return flask.jsonify({"sucess":True, "error": "none"})
         else:
             return flask.jsonify({"success":False, "error": "User is not registered"})
-    except e as Exception:
+    except Exception as e:
         return flask.jsonify({"success":False, "error": e})
 
 
