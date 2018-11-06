@@ -11,7 +11,19 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"> 
 </head>
 <body>
-    <h1>Submissions</h1>
+    <div class="container-fluid" style="padding: 3%">
+        
+        <div style="text-align:center">
+            <h1 class="main-header">SUBMISSIONS</h1>
+        </div>
+        <br>
+        <h4 class="main-subheader">Total Submissions: <span class="badge badge-secondary" id="main_subheader_span"></span></h4>
+        
+        <br>
+
+        <div id="submissions_list"></div>
+        
+    </div>
 </body>
 
 <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
