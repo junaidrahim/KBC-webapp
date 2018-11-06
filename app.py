@@ -33,7 +33,7 @@ def api_register_user():
     try:
         a = generate_id()
         registered_users[a] = data['name']
-        return flask.jsonify({"sucess":True, "id":a, "error": "none"})
+        return flask.jsonify({"success":True, "id":a, "error": "none"})
 
     except Exception as e:
         return flask.jsonify({"success":False, "error": e})
