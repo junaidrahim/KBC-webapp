@@ -13,6 +13,7 @@ let add_participant_html = (data) => {
         <div class="card" style="width: auto; float: left; margin: 10px;">
             <div class="card-body">
                 <h4 class="card-title"><b>${data[id_list[i]]}</b><br><span style="font-size: 85%;">joined</h4>
+                <a class="btn btn-warning" style="float: right; margin: 10px;">${id_list[i]}</a>
             </div>
         </div>
         `;

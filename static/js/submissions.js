@@ -44,11 +44,11 @@ let add_submissions_html = (data) => {
         let score = data_sorted[id_data_sorted[i]][1].reduce((x,y) => x+y, 0);
 
         submissions_html.innerHTML += `
-        <div class="card" style="width: 15%; height: 170px; float: left; margin: 10px;">
+        <div class="card" style="width: auto; height: 170px; float: left; margin: 10px;">
             <div class="card-body">
                 <h5 style="float: right"><span class="badge badge-dark">#${i+1}</span></h5>
                 <h4 class="card-title"><b>${data_sorted[id_data_sorted[i]][0]}</b></h4>
-        
+                <a class="btn btn-info" style="float: left; margin: 10px; font-size: 15px">${id_data_sorted[i]}</a>
                 <a class="btn btn-warning" style="float: right; margin: 10px; font-weight: bolder">Score: ${score}</a>
             </div>
         </div>

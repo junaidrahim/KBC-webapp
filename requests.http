@@ -2,14 +2,14 @@ POST http://192.168.0.106:8000/api/post/register
 content-type: application/json
 
 {
-    "name":"Gabbar Singh"
+    "name":"Raghunath Singh"
 }
 #########
 POST http://192.168.0.106:8000/api/post/submission
 content-type: application/json
 
 {
-    "name":"Gabbar Singh",
-    "id": "dxjqv",
+    "name":"Raghunath Singh",
+    "id": "ewi1a",
     "score": 90
 }
