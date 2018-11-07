@@ -52,17 +52,17 @@ def api_delete_registration():
 @server.route("/api/post/submission",methods=["POST"])
 def api_add_submission():
     data = flask.request.get_json()
-    
+    print(data)
     try:
         if(data["id"] in registered_users and registered_users[data["id"]]==data["name"]):
             if(data["id"] not in submissions):
                 submissions[data["id"]] = [data["name"],[int(data["score"])]]
-                #print(submissions)
-                return flask.jsonify({"sucess":True, "error": "none"})
+                print(submissions)
+                return flask.jsonify({"success":True, "error": "none"})
             else:
-                submissions[data["id"]][1].append(data["score"])
-                #print(submissions)
-                return flask.jsonify({"sucess":True, "error": "none"})
+                submissions[data["id"]][1].append(int(data["score"]))
+                print(submissions)
+                return flask.jsonify({"success":True, "error": "none"})
         else:
             return flask.jsonify({"success":False, "error": "User is not registered"})
     except Exception as e:
