@@ -42,7 +42,7 @@ def api_register_user():
 @server.route("/api/post/delete_registration",methods=["POST"])
 def api_delete_registration():
     data = flask.request.get_json()
-
+    print(data)
     if(data["id"] in registered_users and registered_users[data["id"]]==data["name"]):
         del registered_users[data["id"]]
         return flask.jsonify({"success":True, "error":"none"})
