@@ -56,7 +56,7 @@ def api_add_submission():
     try:
         if(data["id"] in registered_users and registered_users[data["id"]]==data["name"]):
             if(data["id"] not in submissions):
-                submissions[data["id"]] = [data["name"],[data["score"]]]
+                submissions[data["id"]] = [data["name"],[int(data["score"])]]
                 #print(submissions)
                 return flask.jsonify({"sucess":True, "error": "none"})
             else:
