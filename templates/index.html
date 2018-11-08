@@ -7,8 +7,14 @@
     <title>Welcome</title>
 
     <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
 </head>
 <body>
-    <h1>Index</h1>
+    <div class="container">
+        <br><br>
+        <h1>KBC - Quiz Game</h1>
+        <a href="{{ url_for('static',filename='QuizBeta.apk') }}" download>Download QuizBeta.apk</a>
+    </div>
 </body>
 </html>
