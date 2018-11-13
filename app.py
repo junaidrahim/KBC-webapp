@@ -15,6 +15,9 @@ def generate_id():
 def index_page():
     return flask.render_template("index.html")
 
+@server.route("/questions",methods=["GET"])
+def questions_page():
+    return flask.render_template("questions.html")
 
 @server.route("/registered",methods=["GET"])
 def registered_page():
