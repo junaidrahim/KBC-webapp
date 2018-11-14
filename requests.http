@@ -1,8 +1,9 @@
-POST http://192.168.0.106:8000/api/post/register
+POST http://142.93.213.48:8000/api/post/delete_registration
 content-type: application/json
 
 {
-    "name":"Raghunath Singh"
+    "name":"f",
+    "id":"7msyn"
 }
 #########
 POST http://192.168.0.106:8000/api/post/submission

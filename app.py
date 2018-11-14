@@ -3,8 +3,11 @@ import random, string
 
 server = flask.Flask(__name__)
 
+d = open("data.json","r")
+d_w = open("data.json","w")
+
 registered_users = {}
-submissions = {}
+submissions = dict(d.read())
 
 
 def generate_id():
@@ -55,7 +58,7 @@ def api_delete_registration():
 @server.route("/api/post/submission",methods=["POST"])
 def api_add_submission():
     data = flask.request.get_json()
-    print(data)
+
     try:
         if(data["id"] in registered_users and registered_users[data["id"]]==data["name"]):
             if(data["id"] not in submissions):
@@ -71,6 +74,7 @@ def api_add_submission():
     except Exception as e:
         return flask.jsonify({"success":False, "error": e})
 
+    d_w.write(str(submissions))
 
 @server.route("/api/get/registered_users", methods=["GET"])
 def api_get_registered_users(): # for the registered.html webpage
