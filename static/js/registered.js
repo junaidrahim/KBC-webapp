@@ -1,5 +1,4 @@
-const ip = "192.168.0.104:8000";
-
+const ip = "142.93.213.48:8000"
 let add_participant_html = (data) => {
     let id_list = Object.keys(data)
     let user_list_html = document.getElementById("users_list");
