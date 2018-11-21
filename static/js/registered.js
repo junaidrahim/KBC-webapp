@@ -1,4 +1,8 @@
-const ip = "142.93.213.48:8000"
+// The script constantly fetches data about the registered users every 2 second 
+// updates the webpage
+
+const ip = "192.168.0.106:8000"
+
 let add_participant_html = (data) => {
     let id_list = Object.keys(data)
     let user_list_html = document.getElementById("users_list");
@@ -27,8 +31,7 @@ let get_registered_participants = ()=>{
             add_participant_html(data);
             setTimeout(function(){get_registered_participants();},2000);
         }
-    })
-
+    });
 }
 
 get_registered_participants();

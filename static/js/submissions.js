@@ -1,4 +1,8 @@
-const ip = "142.93.213.48:8000"
+// This script constantly fetches the submissions data, sorts it acc to the score
+// and updates the webpage every 2 seconds
+// The audience gets a nice real time view of how all the players are doing
+
+const ip = "192.168.0.106:8000"
 
 let sort_submission_data = (data) => {
     if(data.length == 1){
@@ -8,6 +12,7 @@ let sort_submission_data = (data) => {
     let id = Object.keys(data);
     let flag = true;
 
+    // bubble sort
     while(flag){
         flag = false
 
@@ -15,7 +20,7 @@ let sort_submission_data = (data) => {
             let a = data[id[i]][1].reduce((x,y) => x+y, 0) // finding the sum of the scores
             let b = data[id[i+1]][1].reduce((x,y) => x+y, 0)
             
-            if(a<b){
+            if(a<b){ // swapping
                 let temp = data[id[i]]
                 data[id[i]] = data[id[i+1]]
                 data[id[i+1]] = temp
@@ -24,7 +29,7 @@ let sort_submission_data = (data) => {
             }   
         }
     }
-    console.log(data)
+    // console.log(data)
     return data
 }
 
@@ -55,6 +60,7 @@ let add_submissions_html = (data) => {
     }
 }
 
+// sending requests every 2 seconds
 let get_submissions_data = () => {
     $.ajax({
         type: "GET",
