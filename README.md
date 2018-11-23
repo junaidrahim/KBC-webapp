@@ -10,6 +10,61 @@ conduct the quiz game.
 This project is inpired by the show "Kaun Banega Crorepati" or "KBC". I built this because my housing society wanted
 to conduct a small quiz event for the children on the eve of Children's Day 2018.
 
+<br>
+
+## How to start the server ?
+
+### Dependencies 
+
+1. Python3
+2. Flask
+
+### To install the dependencies:
+ 
+run `pip3 install -r requirements.txt`
+> NOTE: use `pip` or `pip3` as specified in your operating system
+
+### Directory Structure
+
+```
+├── app.py
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── static
+│   ├── css
+│   │   ├── index.css
+│   │   ├── registered.css
+│   │   └── submissions.css
+│   └── js
+│       ├── jquery.min.js
+│       ├── registered.js
+│       └── submissions.js
+└── templates
+    ├── index.html
+    ├── questions.html
+    ├── registered.html
+    └── submissions.html
+
+4 directories, 14 files
+```
+
+## To start the server:
+1. Add your local ip on the first lines of `static/js/registered.js` and `static/js/submissions.js`
+2. The run `python3 app.py`
+
+> NOTE: Don't forget the first step, else your js won't have a valid ip to make requests to.
+
+After this you will be able to view it on `http://localhost:8000/` in your browser.
+
+The app is availabe on : 
+
+<br>
+
+## Screenshots : 
+
+<br>
+
 ## How does this Work ?
 
 Well, the basics are pretty simple. This repository has the code for the server. You start the server
@@ -29,6 +84,7 @@ and then use an android app that makes appropriate requests to the server and yo
 * **URL** : `/api/post/register`
 
     * Method : `POST`
+    * Description : Will register the user and send a unique id.
     * Required Params : `name=[string]`
     * Sample Request : `{ "name" : "John Doe" }`
     * Success Response : `{ "success":True, "id":"<some unique id>", "error": "none" }`
@@ -37,8 +93,9 @@ and then use an android app that makes appropriate requests to the server and yo
 * **URL** : `/api/post/delete_registration`
 
     * Method : `POST`
+    * Description: Will delete the user whose corresponding details were sent.
     * Required Params : `name=[string], id=[string]`
-    * Sample Request : `{ "name" : "John Doe", "id"="89jes1s" }`
+    * Sample Request : `{ "name" : "John Doe", "id":"89jes1s" }`
     * Success Response : `{ "success":True, "error":"none" }`
     * Error Response : `{ "success":False, "error":"request to delete a non-existing user" }`
 
@@ -46,8 +103,46 @@ and then use an android app that makes appropriate requests to the server and yo
 * **URL** : `/api/post/submission`
 
     * Method : `POST`
+    * Description : Will append the score sent for the corresponding user. Total score will be the sum of the array
     * Required Params : `name=[string], id=[string], score=[int]`
-    * Sample Request : `{ "name" : "John Doe", "id"="89jes1s", "score": 4 }`
+    * Sample Request : `{ "name" : "John Doe", "id":"89jes1s", "score": 4 }`
     * Success Response : `{ "success":True, "error":"none" }`
     * Error Response : `{"success":False, "error": "User is not registered"}`
 
+* **URL** : `/api/get/registered_users`
+
+    * Method : `GET`
+    * Description : Will return details of all the registered users in the following json format
+    * Required Params : `none`
+    * Success Response : 
+        ```json
+        {
+            "t1x7l": "Elliot Alderson",
+            "zwokr": "John Doe"
+        }
+        ```
+
+* **URL** : `/api/get/submissions`
+
+    * Method : `GET`
+    * Description : Will return the submissions of all the users in the following json format.
+    * Required Params : `none`
+    * Success Response : 
+        ```json
+        {   
+            "t1x7l": [ "Elliot Alderson", [3, 4, 0, 0, 0, 5] ],
+            "zwokr": [ "John Doe", [4, 0, 0, 0, 2, 3] ]
+        }
+        ```
+
+<br>
+
+## LICENSE
+
+Copyright(c) **Junaid H Rahim**. All Rights Reserved
+
+Licensed under the [MIT](LICENSE) License.
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/for-you.svg)](https://forthebadge.com)

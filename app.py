@@ -3,9 +3,6 @@ import random, string
 
 server = flask.Flask(__name__)
 
-d = open("data.json","r")
-d_w = open("data.json","w")
-
 registered_users = {}
 submissions = {}
 
