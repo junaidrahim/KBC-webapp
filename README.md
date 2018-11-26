@@ -31,7 +31,7 @@ run `pip3 install -r requirements.txt`
 
 > NOTE: Don't forget the first step, else your js won't have a valid ip to make requests to.
 
-After this you will be able to view it on `http://localhost:8000/` in your browser.
+After this you will be able to view it on `http://<your ip>:8000/` in your browser.
 
 The app is availabe on : 
 
@@ -157,6 +157,19 @@ accordingly.
         ```
 
 <br>
+
+## Note to the Reader
+
+This is a very dead simple project to conduct the game. My userbase was like 20 so I kept it simple. This needs a lot of improvement and security features, it will work fine if you're using this in a closed network for 
+limited amount of people.
+
+## Features to be implemented :
+
+- [ ] Database Support, probably mongodb
+- [ ] Adding more security to the API
+- [ ] More Sophisticated Authentication
+- [ ] A cap on max amount of score the API accepts.
+
 
 ## LICENSE
 
