@@ -1,4 +1,4 @@
-# KBC WebApp
+!["HEADER"](screenshots/header.png)
 
 It's a simple **Server + Android App** system which can be used to conduct a quiz game for a relatively
 moderate amount of users. This repository contains the code for the server written in **Python3** using the
@@ -180,3 +180,5 @@ Licensed under the [MIT](LICENSE) License.
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/for-you.svg)](https://forthebadge.com)
+
+Header Icon made by <a href="https://www.flaticon.com/authors/prosymbols" title="Prosymbols">Prosymbols</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
