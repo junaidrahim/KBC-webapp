@@ -24,30 +24,6 @@ to conduct a small quiz event for the children on the eve of Children's Day 2018
 run `pip3 install -r requirements.txt`
 > NOTE: use `pip` or `pip3` as specified in your operating system
 
-### Directory Structure
-
-```
-├── app.py
-├── LICENSE
-├── README.md
-├── requirements.txt
-├── static
-│   ├── css
-│   │   ├── index.css
-│   │   ├── registered.css
-│   │   └── submissions.css
-│   └── js
-│       ├── jquery.min.js
-│       ├── registered.js
-│       └── submissions.js
-└── templates
-    ├── index.html
-    ├── questions.html
-    ├── registered.html
-    └── submissions.html
-
-4 directories, 14 files
-```
 
 ## To start the server:
 1. Add your local ip on the first lines of `static/js/registered.js` and `static/js/submissions.js`
@@ -63,12 +39,52 @@ The app is availabe on :
 
 ## Screenshots : 
 
+### Index Page
+![](screenshots/index.png) <br>
+
+### Registered Users
+![](screenshots/registered.png) <br>
+
+### Submissions
+![](screenshots/submissions.png) 
+
 <br>
 
 ## How does this Work ?
 
 Well, the basics are pretty simple. This repository has the code for the server. You start the server
 and then use an android app that makes appropriate requests to the server and you get to conduct your game.
+
+Check the players who registered on the page `http://localhost:8000/resgistered`
+
+And then you can check/display the submissions on the page `http://localhost:8000/submissions`. The javascript
+on this page will fetch the submission data, add up the scores and sort the players, and display them in ranks
+accordingly.
+
+### Directory Structure
+
+```bash
+├── app.py    // the main file
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── static
+│   ├── css
+│   │   ├── index.css
+│   │   ├── registered.css
+│   │   └── submissions.css
+│   └── js
+│       ├── jquery.min.js
+│       ├── registered.js       // code to fetch registered and
+│       └── submissions.js      // submissions data and sort them
+└── templates
+    ├── index.html         // the html pages
+    ├── questions.html
+    ├── registered.html
+    └── submissions.html
+
+4 directories, 14 files
+```
 
 ### Web Pages Available:
 

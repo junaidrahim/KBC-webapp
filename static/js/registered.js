@@ -1,7 +1,7 @@
 // The script constantly fetches data about the registered users every 2 second 
 // updates the webpage
 
-const ip = "192.168.0.106:8000"
+const ip = "192.168.0.104:8000"
 
 let add_participant_html = (data) => {
     let id_list = Object.keys(data)
