@@ -33,7 +33,7 @@ run `pip3 install -r requirements.txt`
 
 After this you will be able to view it on `http://<your ip>:8000/` in your browser.
 
-The app is availabe on : 
+The app is availabe on : https://github.com/junaidrahim/KBC-Quiz-App
 
 <br>
 
