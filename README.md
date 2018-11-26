@@ -48,7 +48,10 @@ The app is availabe on :
 ### Submissions
 ![](screenshots/submissions.png) 
 
-<br>
+
+> NOTE: The js won't execute if you do `localhost` due to same origin policy, instead put the ip of your pc/server.
+
+<br><br>
 
 ## How does this Work ?
 
@@ -94,6 +97,8 @@ accordingly.
 4. `http://localhost:8000/questions` . This page can be used to display the questions to the audience after the quiz is over
 
 > Note: Replace `localhost` with the ip of your computer on the network
+
+<br>
 
 ### API Details:
 
