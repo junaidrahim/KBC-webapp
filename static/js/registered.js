@@ -23,9 +23,9 @@ let add_participant_html = (data) => {
     }
 }
 
-let get_registered_participants = ()=>{
+let get_registered_participants = () => {
     $.ajax({
-        type: 'GET',
+        type: "GET",
         url: `http://${ip}/api/get/registered_users` ,
         success: (data) => {                          
             add_participant_html(data);

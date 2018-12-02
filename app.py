@@ -1,5 +1,5 @@
 import flask
-import random, string
+import random
 
 server = flask.Flask(__name__)
 
@@ -18,7 +18,7 @@ def index_page():
     return flask.render_template("index.html")
 
 # if you want the audience to see the questions after the quiz is done
-@server.route("/questions",methods=["GET"]) 
+@server.route("/questions",methods=["GET"])
 def questions_page():
     return flask.render_template("questions.html")
 
@@ -49,7 +49,7 @@ def api_register_user():
 
 
 # delete the registered user so that it can't make any more submissions
-@server.route("/api/post/delete_registration",methods=["POST"]) 
+@server.route("/api/post/delete_registration",methods=["POST"])
 def api_delete_registration():
     data = flask.request.get_json()
     print(data)
@@ -91,4 +91,4 @@ def api_get_submissions(): # for the submissions.html webpage
 
 # let the game begin !
 if __name__ == "__main__":
-    server.run(port=8000, host="0.0.0.0", debug=True)
+    server.run(port=8000, host="0.0.0.0")

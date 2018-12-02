@@ -5,7 +5,7 @@
 const ip = "192.168.0.104:8000"
 
 let sort_submission_data = (data) => {
-    if(data.length == 1){
+    if(data.length === 1){
         return data
     }
 
@@ -14,18 +14,18 @@ let sort_submission_data = (data) => {
 
     // bubble sort
     while(flag){
-        flag = false
+        flag = false;
 
-        for(i=0; i<id.length-1; i++){
-            let a = data[id[i]][1].reduce((x,y) => x+y, 0) // finding the sum of the scores
-            let b = data[id[i+1]][1].reduce((x,y) => x+y, 0)
+        for(let i=0; i<id.length-1; i++){
+            let a = data[id[i]][1].reduce((x,y) => x+y, 0); // finding the sum of the scores
+            let b = data[id[i+1]][1].reduce((x,y) => x+y, 0);
             
             if(a<b){ // swapping
-                let temp = data[id[i]]
-                data[id[i]] = data[id[i+1]]
-                data[id[i+1]] = temp
+                let temp = data[id[i]];
+                data[id[i]] = data[id[i+1]];
+                data[id[i+1]] = temp;
 
-                flag = true
+                flag = true;
             }   
         }
     }
@@ -45,7 +45,7 @@ let add_submissions_html = (data) => {
     let submissions_html = document.getElementById("submissions_list")
     submissions_html.innerHTML = ""
 
-    for(i=0; i<id_data_sorted.length; i++){
+    for(let i=0; i<id_data_sorted.length; i++){
         let score = data_sorted[id_data_sorted[i]][1].reduce((x,y) => x+y, 0);
 
         submissions_html.innerHTML += `
