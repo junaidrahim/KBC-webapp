@@ -33,7 +33,9 @@ run `pip3 install -r requirements.txt`
 
 After this you will be able to view it on `http://<your ip>:8000/` in your browser.
 
-The app is availabe on : https://github.com/junaidrahim/KBC-Quiz-App
+The .apk file is available [here](static/KBC-quizapp.apk)
+
+The code for the app is availabe on : https://github.com/junaidrahim/KBC-Quiz-App
 
 <br>
 
@@ -67,26 +69,32 @@ accordingly.
 ### Directory Structure
 
 ```bash
-├── app.py    // the main file
+├── app.py
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
+├── screenshots
+│   ├── header.png
+│   ├── index.png
+│   ├── registered.png
+│   └── submissions.png
 ├── static
 │   ├── css
 │   │   ├── index.css
 │   │   ├── registered.css
 │   │   └── submissions.css
-│   └── js
-│       ├── jquery.min.js
-│       ├── registered.js       // code to fetch registered and
-│       └── submissions.js      // submissions data and sort them
+│   ├── js
+│   │   ├── jquery.min.js
+│   │   ├── registered.js
+│   │   └── submissions.js
+│   └── KBC-quizapp.apk
 └── templates
-    ├── index.html         // the html pages
+    ├── index.html
     ├── questions.html
     ├── registered.html
     └── submissions.html
 
-4 directories, 14 files
+5 directories, 19 files
 ```
 
 ### Web Pages Available:
