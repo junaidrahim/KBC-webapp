@@ -2,7 +2,7 @@
 // and updates the webpage every 2 seconds
 // The audience gets a nice real time view of how all the players are doing
 
-const ip = "192.168.0.104:8000"
+const ip = "192.168.0.106:8000"
 
 let sort_submission_data = (data) => {
     if(data.length === 1){

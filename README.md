@@ -7,7 +7,7 @@ conduct the quiz game.
 
 ## Motivation 
 
-This project is inpired by the show "Kaun Banega Crorepati" or "KBC". I built this because my housing society wanted
+This project is named after the show "Kaun Banega Crorepati" or "KBC". I built this because my housing society wanted
 to conduct a small quiz event for the children on the eve of Children's Day 2018.
 
 <br>
