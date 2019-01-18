@@ -1,9 +1,11 @@
 !["HEADER"](screenshots/header.png)
 
 It's a simple **Server + Android App** system which can be used to conduct a quiz game for a relatively
-moderate amount of users. This repository contains the code for the server written in **Python3** using the
+moderate amount of users. This enables a group of participants to sit together and play a quiz game and find out who scored the most. 
+
+This repository contains the code for the server written in **Python3** using the
 **Flask** framework. It just provides a REST API to be used by the app and some web pages that help the host
-conduct the quiz game.
+conduct the quiz game. 
 
 ## Motivation 
 
