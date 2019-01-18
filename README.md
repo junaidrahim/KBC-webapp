@@ -173,6 +173,8 @@ limited amount of people.
 
 ## Features to be implemented :
 
+We will have to add a lot of features to make this system a solid one. Some of them are below, I am always open to new suggestions and PRs.
+
 - [ ] Database Support, probably mongodb
 - [ ] Adding more security to the API
 - [ ] More Sophisticated Authentication
