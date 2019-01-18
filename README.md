@@ -168,12 +168,12 @@ accordingly.
 
 ## Note to the Reader
 
-This is a very dead simple project to conduct the game. My userbase was like 20 so I kept it simple. This needs a lot of improvement and security features, it will work fine if you're using this in a closed network for 
+This is a very dead simple project to conduct the game. My userbase was like 20 so I kept it simple 😅. This needs a lot of improvement and security features, it will work fine if you're using this in a closed network for 
 limited amount of people.
 
 ## Features to be implemented :
 
-We will have to add a lot of features to make this system a solid one. Some of them are below, I am always open to new suggestions and PRs.
+We will have to add a lot of features to make this system a solid one. Some of them are below, I am always open to new suggestions and PRs. 😁✌️
 
 - [ ] Database Support, probably mongodb
 - [ ] Adding more security to the API
